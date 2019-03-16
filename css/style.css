@@ -1,0 +1,63 @@
+/* {
+    border: 1px solid white;
+
+}*/
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    font-family: 'VT323';
+    font-size: 15pt;
+    height: 100%;
+    color: yellow;
+}
+
+.div-image {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.fundo-claro {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    background-color: #717171;
+    margin-top: 3%;
+    border-radius: 1rem;
+}
+
+.fundo-escuro {
+    position: relative;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: #141414;
+    color: white;
+    border-radius: 1rem;
+    color: yellow;
+}
+
+pre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.4em;
+    background-color: #141414;
+    color: yellow;
+    display: block;
+    white-space: pre;
+    margin: 1em 0;
+    border: 0;
+}
+
+#screentext {
+    background-color: #141414;
+    border: 0;
+    width: 70%
+}
