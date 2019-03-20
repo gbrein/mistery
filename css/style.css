@@ -1,7 +1,7 @@
-/* {
+/* * {
     border: 1px solid white;
 
-}*/
+}*/ 
 html {
     height: 100%;
 }
@@ -23,7 +23,7 @@ body {
 .fundo-claro {
     position: fixed;
     width: 80%;
-    height: 80%;
+    height: 95%;
     background-color: #717171;
     margin-top: 3%;
     border-radius: 1rem;
@@ -60,4 +60,13 @@ pre {
     background-color: #141414;
     border: 0;
     width: 70%
+}
+#pre2{
+    width: 20%;
+    display:flex;
+    font-size: 0.7em;
+}
+#console-texto{
+    display: flex;
+    flex-direction: row;
 }

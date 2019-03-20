@@ -39,5 +39,5 @@ var frase = [{
 ]
 
 var arr = [
-    'Algoritmo converte binário para decimal','quero mais que se foda','só para garantir', 'sabemos que com 2 funciona'
+    // 'Vamos começar.... o primeiro desafio é forca... Você só poderá errar 6 vezes, caso você não acerte GAMEOVER para o Fred', '3', '2', '1', 'vamos começar', 'digite uma letra'
 ]

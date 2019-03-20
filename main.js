@@ -1,8 +1,12 @@
 var inp = document.getElementById('screentext');
 var comunic = document.getElementById('entrada');
+var consoleText = document.getElementById('console-texto');
 var pre = document.getElementById('pre');
+var c = document.getElementById('c');
+var pal, word, letraErrada;
 comunic.style.wordWrap = "break-word";
-var cEnt = 0;
+var chronometer = new Chronometer();
+var cEnt =  0;
 
 var objCont = {
     contador: 0
@@ -16,10 +20,10 @@ window.onload = function () {
                 cEnt += 1;
                 desenhaFred();
                 slowtype('Ola seu corno, sequestramos o Fred, e não vamos devolvelo a menos que você solucione os 3 desafios que virão pela frente. Você esta pronto? Pressione enter para começar', 60);
-
             }
         }
     });
+    var word = new Word(palavras);
 }
 
 function slowtype(texto, delay) {
