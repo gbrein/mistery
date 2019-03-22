@@ -4,10 +4,10 @@ var consoleText = document.getElementById('console-texto');
 var pre = document.getElementById('pre');
 var c = document.getElementById('c');
 var pal, word, letraErrada;
+var fourMinutes = 240;
 comunic.style.wordWrap = "break-word";
-var chronometer = new Chronometer();
-var cEnt =  0;
-
+var cEnt = 0;
+var contaForca = 0;
 var objCont = {
     contador: 0
 }
@@ -28,22 +28,26 @@ window.onload = function () {
 
 function slowtype(texto, delay) {
     comunic.innerText = ' ';
-    return new Promise (resolve => {
-    var contatexto = setInterval(function (texto) {
-        if (objCont.contador < texto.length) {
-            if (texto[objCont.contador] == 0) {
-                comunic.innerText += "\u00A0";
+    return new Promise(resolve => {
+        var contatexto = setInterval(function (texto) {
+            if (objCont.contador < texto.length) {
+                if (texto[objCont.contador] == 0) {
+                    comunic.innerText += "\u00A0";
+                }
+                comunic.innerText += texto[objCont.contador];
+                objCont.contador++;
+            } else {
+                objCont.contador = 0;
+                clearInterval(contatexto);
             }
-            comunic.innerText += texto[objCont.contador];
-            objCont.contador++;
-        } else {
-            objCont.contador = 0;
-            clearInterval(contatexto);
-        }
-    }.bind(objCont), delay, texto);
-    setTimeout (()=> {
-        resolve (`fim`);
-    }, delay * texto.length + 2000);
-    
-});
+        }.bind(objCont), delay, texto);
+        setTimeout(() => {
+            resolve(`fim`);
+        }, delay * texto.length + 2000);
+
+    });
+}
+function lettersOnly(input) {
+    var regex = /[^a-z]/gi;
+    input.value = input.value.replace(regex,"");
 }

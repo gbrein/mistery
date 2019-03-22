@@ -7,14 +7,15 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="base.js"></script>
-    <script src="cripto.js"></script>
-    <script src="cronometro.js"></script>
-    <script src="desenhaforca.js"></script>
-    <script src="palavras.js"></script>
-    <script src="forca.js"></script>
-    <script src="hanoi.js"></script>
-    <script src="desenhafred.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/cripto.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/desenhaforca.js"></script>
+    <script src="js/palavras.js"></script>
+    <script src="js/forca.js"></script>
+    <script src="js/hanoi.js"></script>
+    <script src="js/desenhafred.js"></script>
+    <script src="js/gameover.js"></script>
     
 </head>
 
@@ -23,7 +24,7 @@
         <div class="fundo-claro">
             <div class="fundo-escuro">
 
-                <p>Initializing 'Random Quote Machine Generator 3117' v0.3
+                <p>Initializing PC IBM v0.3
                     ...........................................................</p>
                 <div id="console-texto"><pre id="pre">
 
@@ -41,7 +42,7 @@
                 <br>Guilherme Brein &#60gbrein@gmail.com&#62<br>Copyright (c) 2019<br>___________________________________________________________
                 </p><p>Aperte Enter para Iniciar</p>
             </div>
-                <p id="c">C:><input id="screentext" autofocus /></p>
+                <p id="c">C:><input id="screentext" onkeyup="lettersOnly(this)" autofocus /></p>
 
 
 
@@ -56,6 +57,6 @@
 
 </body>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 
 </html>
