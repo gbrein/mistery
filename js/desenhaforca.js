@@ -1,5 +1,6 @@
 function desenhaForca() {
     var word = new Word(palavras);
+    pre.style.marginLeft = "0";
     pre.style.width = '60%';
     pre.innerHTML = ' ';
     pre.innerHTML += '<spam id = \'desenho\'>' +  ` 

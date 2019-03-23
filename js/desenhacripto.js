@@ -1,0 +1,3 @@
+function desenhaCripto(){
+    pre.innerHTML = ' ';
+}

@@ -2,9 +2,11 @@ var inp = document.getElementById('screentext');
 var comunic = document.getElementById('entrada');
 var consoleText = document.getElementById('console-texto');
 var pre = document.getElementById('pre');
+var contaCerto = 0;
 var c = document.getElementById('c');
-var pal, word, letraErrada;
-var fourMinutes = 240;
+var press = document.getElementById('press');
+var pal, word, letraErrada, desenho;
+var time;
 comunic.style.wordWrap = "break-word";
 var cEnt = 0;
 var contaForca = 0;
@@ -15,11 +17,17 @@ var objCont = {
 window.onload = function () {
     inp.addEventListener('keypress', function (e) {
         var key = e.which || e.keyCode;
+        if (cEnt === 1) {
+            comunic.innerText = ' ';
+            forca();
+            cEnt += 1;
+        }
+
         if (key === 13) {
             if (cEnt == 0) {
                 cEnt += 1;
                 desenhaFred();
-                slowtype('Ola seu corno, sequestramos o Fred, e não vamos devolvelo a menos que você solucione os 3 desafios que virão pela frente. Você esta pronto? Pressione enter para começar', 60);
+                teste(arr1, 20);
             }
         }
     });
@@ -47,7 +55,8 @@ function slowtype(texto, delay) {
 
     });
 }
+
 function lettersOnly(input) {
     var regex = /[^a-z]/gi;
-    input.value = input.value.replace(regex,"");
+    input.value = input.value.replace(regex, "");
 }

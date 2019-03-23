@@ -41,3 +41,4 @@ var frase = [{
 var arr = [
     // 'Vamos começar.... o primeiro desafio é forca... Você só poderá errar 3 vezes, caso você não acerte GAMEOVER para o Fred', '3', '2', '1', 'vamos começar', 'digite uma letra'
 ]
+var arr1 = ['Ola, sequestramos o Fred, e não vamos devolvelo a menos que você solucione os 3 desafios que virão pela frente. Você esta pronto? Pressione enter para começar'];

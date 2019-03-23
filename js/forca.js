@@ -1,23 +1,28 @@
 function forca() {
+    // var contaCerto = 0;
     teste(arr, 5);
     word = desenhaForca();
-    var contaCerto = 0;
+
     pal = document.getElementsByClassName('pal');
-    var desenho = document.getElementById('desenho');
+    desenho = document.getElementById('desenho');
     letraErrada = document.getElementById('letras');
     let arrPalavra = word.palForca.split('')
     let arrErrada = [];
     let display = document.getElementById('timer');
-    startTimer(fourMinutes, display);
+    startTimer(120, display);
     inp.addEventListener('keypress', function (e) {
         var key = e.which || e.keyCode;
         if (key === 13) {
             let letr = inp.value;
             letr = letr.toLowerCase()
             inp.value = '';
-            let x = confereLetra(letr, arrPalavra, pal, arrErrada, contaCerto);
-            if (x === 100) {
-                gameover();
+            let x = confereLetra(letr, arrPalavra, pal, arrErrada);
+            if (contaForca === 4) {
+                clearInterval(time);
+                return gameover();
+            }
+            if (contaCerto === arrPalavra.length) {
+                
             }
         }
     });
@@ -31,21 +36,24 @@ async function teste(arr, tempo) {
     c.style.visibility = 'visible';
 }
 
-function confereLetra(letra, palavra, pal, arrErrada, contaCerto) {
+function confereLetra(letra, palavra, pal, arrErrada) {
     let verifica = false;
     console.log(arrErrada);
     verifica = palavra.includes(letra);
     if (verifica) {
         palavra.forEach((element, idx) => {
             if (letra == element) {
+                console.log('teste');
                 pal[idx].innerText = letra;
                 contaCerto += 1;
+                console.log(contaCerto);
             }
+            
         });
-        if (contaCerto = palavra.length) {
-            teste('Voce conseguiu, esta pronto para o proximo teste'. 40);
-            zeraCronometro();
-            cripto();
+        if (contaCerto == palavra.length) {
+            teste('Voce conseguiu, esta pronto para o proximo teste', 40);
+            clearInterval(time);
+            return victory();
         }
     }
 
